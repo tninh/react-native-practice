@@ -11,29 +11,41 @@ import React, {Component} from 'react';
 // import { AppRegistry, Image } from 'react-native';
 
 
-export default class LotsOfStyles extends Component {
+export default class FixedDimensionBasics extends Component{
   render(){
     return (
       <View>
-        <Text style={styles.red}>just red</Text>
-        <Text style={styles.bigblue}>just bigblue</Text>
-        <Text style={[styles.bigblue, styles.red]}> bigblue, then red </Text>
-        <Text style={[styles.red, styles.bigblue]}> red, then bigblue </Text>
+        <View style={{width: 50, height: 50, backgroundColor: 'powerblue'}} />
+        <View style={{width:100, height: 100, backgroundColor: 'skyblue'}} />
+        <View style={{width: 150, height: 150, backgroundColor: 'steelblue'}} />
       </View>
     );
   }
 }
+AppRegistry.registerComponent('AwesomeProject', () => FixedDimensionBasics);
+// export default class LotsOfStyles extends Component {
+//   render(){
+//     return (
+//       <View>
+//         <Text style={styles.red}>just red</Text>
+//         <Text style={styles.bigblue}>just bigblue</Text>
+//         <Text style={[styles.bigblue, styles.red]}> bigblue, then red </Text>
+//         <Text style={[styles.red, styles.bigblue]}> red, then bigblue </Text>
+//       </View>
+//     );
+//   }
+// }
 
-const styles = StyleSheet.create({
-    bigblue:{
-      color: 'blue',
-      fontWeight: 'bold', 
-      fontSize: 30,
-    },
-    red: {
-      color: 'red',
-    }, 
-});
+// const styles = StyleSheet.create({
+//     bigblue:{
+//       color: 'blue',
+//       fontWeight: 'bold', 
+//       fontSize: 30,
+//     },
+//     red: {
+//       color: 'red',
+//     }, 
+// });
 // class Blink extends Component {
 //   constructor(props) {
 //     super(props);
@@ -97,7 +109,7 @@ const styles = StyleSheet.create({
 //       );
 //   }
 // }
-AppRegistry.registerComponent('AwesomeProject', () => LotsOfStyles);
+
 // class Greeting extends Component{
 //   render(){
 //     return(
