@@ -7,22 +7,39 @@
  */
 
 import React, {Component} from 'react';
- import {AppRegistry, StyleSheet, Text, View} from 'react-native';
+import {AppRegistry, StyleSheet, Text, View} from 'react-native';
 // import { AppRegistry, Image } from 'react-native';
 
 
-export default class FixedDimensionBasics extends Component{
+export default class FlexDimensionBasics extends Component{
   render(){
-    return (
-      <View>
-        <View style={{width: 50, height: 50, backgroundColor: 'powerblue'}} />
-        <View style={{width:100, height: 100, backgroundColor: 'skyblue'}} />
-        <View style={{width: 150, height: 150, backgroundColor: 'steelblue'}} />
+    return(
+      // <View style={{flex: 1}}>
+      //   <View style={{width: 100, height: 100, backgroundColor: 'powerblue'}} />
+      //   <View style={{width:100, height: 100, backgroundColor: 'skyblue'}} />
+      //   <View style={{width: 150, height: 150, backgroundColor: 'steelblue'}} />
+      // </View>
+      <View style={{flex: 1}}>
+        <View style={{flex: 1, backgroundColor: 'powderblue'}} />
+        <View style={{flex: 2, backgroundColor: 'skyblue'}} />
+        <View style={{flex: 3, backgroundColor: 'steelblue'}} />
       </View>
+      
     );
   }
 }
-AppRegistry.registerComponent('AwesomeProject', () => FixedDimensionBasics);
+AppRegistry.registerComponent('AwesomeProject', () => FlexDimensionBasics);
+// export default class FixedDimensionBasics extends Component{
+//   render(){
+//     return (
+//       <View>
+        // <View style={{width: 50, height: 50, backgroundColor: 'powerblue'}} />
+        // <View style={{width:100, height: 100, backgroundColor: 'skyblue'}} />
+        // <View style={{width: 150, height: 150, backgroundColor: 'steelblue'}} />
+//       </View>
+//     );
+//   }
+// }
 // export default class LotsOfStyles extends Component {
 //   render(){
 //     return (
