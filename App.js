@@ -7,61 +7,86 @@
  */
 
 import React, {Component} from 'react';
-import {AppRegistry, StyleSheet, Text,TextInput, View, Alert, Button} from 'react-native';
+import {Platform, TouchableHighlist, TouchableOpacity, TouchableNativeFeedback, View, AppRegistry, StyleSheet, Text,TextInput, View, Alert, Button} from 'react-native';
 
-
-// import { AppRegistry, Image } from 'react-native';
-
-export default class ButtonBasics extends Component {
+export default class Touchables extends Component{
   _onPressButton(){
     Alert.alert('You tapped the button')
+  }
+  _onLongPressButton(){
+    Alert.alert('You long-pressed the button')
   }
   render(){
     return(
       <View style={styles.container}>
-        <View style = {styles.buttonContainer}>
-        <Button
+        <TouchableHighlight onPress={this._onPressButton} underlayColor="white">
+        <View style = {styles.button}>
+          <Text style={styles.buttonText}>TouchableHightlight</Text>
+        </View>
+        </TouchableHighlight>
+        <TouchableNativeFeedback 
           onPress={this._onPressButton}
-          title="Press Me"
-        />
-        </View>
-        <View style={styles.buttonContainer}>
-          <Button
-            onPress={this._onPressButton}
-            title="Press Me"
-            color="#841584"
-          />
-        </View>
-        <View style={styles.alternativeLayoutButtonContainer}>
-          <Button 
-            onPress={this._onPressButton}
-            title="OK!"
-            color="#841584"
-          />
-          <Button
-            onPress={this._onPressButton}
-            title="This looks great"
-          />
-        </View>
+          background={Platform.OS === 'android'} ? TouchableNativeFeedback.SelectableBackground((): ''>
+          <View>
+            <Text style={styles.buttonText}>TouchableNativeFeedback</Text>
+          </View>
+        </TouchableNativeFeedback>
       </View>
     );
   }
 }
+// import { AppRegistry, Image } from 'react-native';
 
-const styles = StyleSheet.create({
-  container:{
-    flex:1, 
-    justifyContent: 'center',
-  },
-  buttonContainer:{
-    margin: 20
-  },
-  alternativeLayoutButtonContainer:{
-    margin: 20, 
-    flexDirection: 'row',
-    justifyContent: 'space-between'
-  }
-})
+// export default class ButtonBasics extends Component {
+//   _onPressButton(){
+//     Alert.alert('You tapped the button')
+//   }
+//   render(){
+//     return(
+//       <View style={styles.container}>
+//         <View style = {styles.buttonContainer}>
+//         <Button
+//           onPress={this._onPressButton}
+//           title="Press Me"
+//         />
+//         </View>
+//         <View style={styles.buttonContainer}>
+//           <Button
+//             onPress={this._onPressButton}
+//             title="Press Me"
+//             color="#841584"
+//           />
+//         </View>
+//         <View style={styles.alternativeLayoutButtonContainer}>
+//           <Button 
+//             onPress={this._onPressButton}
+//             title="OK!"
+//             color="#841584"
+//           />
+//           <Button
+//             onPress={this._onPressButton}
+//             title="This looks great"
+//           />
+//         </View>
+//       </View>
+//     );
+//   }
+// }
+
+// const styles = StyleSheet.create({
+//   container:{
+//     flex:1, 
+//     justifyContent: 'center',
+//   },
+//   buttonContainer:{
+//     margin: 20
+//   },
+//   alternativeLayoutButtonContainer:{
+//     margin: 20, 
+//     flexDirection: 'row',
+//     justifyContent: 'space-between'
+//   }
+// })
 // export default class PizzaTranslator extends Component{
 //   constructor(props) {
 //     super(props);
