@@ -7,28 +7,98 @@
  */
 
 import React, {Component} from 'react';
-import {AppRegistry, StyleSheet, Text, View} from 'react-native';
+import {AppRegistry, StyleSheet, Text,TextInput, View, Alert, Button} from 'react-native';
+
+
 // import { AppRegistry, Image } from 'react-native';
 
-
-export default class FlexDimensionBasics extends Component{
+export default class ButtonBasics extends Component {
+  _onPressButton(){
+    Alert.alert('You tapped the button')
+  }
   render(){
     return(
-      // <View style={{flex: 1}}>
-      //   <View style={{width: 100, height: 100, backgroundColor: 'powerblue'}} />
-      //   <View style={{width:100, height: 100, backgroundColor: 'skyblue'}} />
-      //   <View style={{width: 150, height: 150, backgroundColor: 'steelblue'}} />
-      // </View>
-      <View style={{flex: 1}}>
-        <View style={{flex: 1, backgroundColor: 'powderblue'}} />
-        <View style={{flex: 2, backgroundColor: 'skyblue'}} />
-        <View style={{flex: 3, backgroundColor: 'steelblue'}} />
+      <View style={styles.container}>
+        <View style = {styles.buttonContainer}>
+        <Button
+          onPress={this._onPressButton}
+          title="Press Me"
+        />
+        </View>
+        <View style={styles.buttonContainer}>
+          <Button
+            onPress={this._onPressButton}
+            title="Press Me"
+            color="#841584"
+          />
+        </View>
+        <View style={styles.alternativeLayoutButtonContainer}>
+          <Button 
+            onPress={this._onPressButton}
+            title="OK!"
+            color="#841584"
+          />
+          <Button
+            onPress={this._onPressButton}
+            title="This looks great"
+          />
+        </View>
       </View>
-      
     );
   }
 }
-AppRegistry.registerComponent('AwesomeProject', () => FlexDimensionBasics);
+
+const styles = StyleSheet.create({
+  container:{
+    flex:1, 
+    justifyContent: 'center',
+  },
+  buttonContainer:{
+    margin: 20
+  },
+  alternativeLayoutButtonContainer:{
+    margin: 20, 
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  }
+})
+// export default class PizzaTranslator extends Component{
+//   constructor(props) {
+//     super(props);
+//     this.state = {text: ''};
+//   }
+//   render(){
+//     return(
+//       <View style={{padding: 10}}>
+//         <TextInput style={{height: 40}} 
+//         placeholder = 'Type here to translate!'
+//         onChangeText = {(text) => this.setState({text})}
+//         />
+//         <Text style={{padding: 10, fontSize: 42}}>
+//           {this.state.text.split(' ').map((word) => word).join(' ')}
+//         </Text>
+//       </View>
+//     );
+//   }
+// }
+// export default class FlexDimensionBasics extends Component{
+//   render(){
+//     return(
+//       // <View style={{flex: 1}}>
+//       //   <View style={{width: 100, height: 100, backgroundColor: 'powerblue'}} />
+//       //   <View style={{width:100, height: 100, backgroundColor: 'skyblue'}} />
+//       //   <View style={{width: 150, height: 150, backgroundColor: 'steelblue'}} />
+//       // </View>
+//       <View style={{flex: 1}}>
+//         <View style={{flex: 1, backgroundColor: 'powderblue'}} />
+//         <View style={{flex: 2, backgroundColor: 'skyblue'}} />
+//         <View style={{flex: 3, backgroundColor: 'steelblue'}} />
+//       </View>
+      
+//     );
+//   }
+// }
+AppRegistry.registerComponent('AwesomeProject', () => ButtonBasics);
 // export default class FixedDimensionBasics extends Component{
 //   render(){
 //     return (
