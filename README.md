@@ -14,3 +14,8 @@ react: 16.4.1
 react-native: 0.56.0
 react-native-background-fetch: 2.0.8
 ```
+
+### Installing 
+All the package you need for this project is listed in __package.json__
+`npm install` to install all the necessary packages
+
