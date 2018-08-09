@@ -1,5 +1,5 @@
 # Awesome Project - ReactNative Practice
-[![npm version](https://img.shields.io/badge/npm%20-v6.2.0-blue.svg)](https://github.com/tninh/react-native-practice) 
+[![npm version](https://img.shields.io/badge/npm-v6.2.0-blue.svg)](https://github.com/tninh/react-native-practice) 
 [![reactnative version](https://img.shields.io/badge/react--native-v0.56.0-blue.svg)](https://facebook.github.io/react-native/blog/2018/07/04/releasing-react-native-056)
 [![iOS build status](https://img.shields.io/badge/iOS-passing-brightgreen.svg)](https://github.com/tninh/tree/master/ios)
 
