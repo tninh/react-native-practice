@@ -35,7 +35,6 @@ react-native run-android
 
 ## Built with 
 * [React](https://reactjs.org/)
-
 * [ReactNative](https://facebook.github.io/react-native/)
 
 
