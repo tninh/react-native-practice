@@ -1,7 +1,5 @@
 # Awesome Project - ReactNative Practice
-[![npm version](https://img.shields.io/badge/npm-6.2.0-blue.svg)](https://github.com/tninh/react-native-practice)
-
-[![iOS build status](https://img.shields.io/badge/iOS-passing-brightgreen.svg)](https://github.com/tninh/tree/master/ios)
+[![npm version](https://img.shields.io/badge/npm-6.2.0-blue.svg)](https://github.com/tninh/react-native-practice) [![iOS build status](https://img.shields.io/badge/iOS-passing-brightgreen.svg)](https://github.com/tninh/tree/master/ios)
 
 This project is for the purpose of practicing ReactNative.
 
